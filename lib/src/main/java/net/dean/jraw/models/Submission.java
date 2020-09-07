@@ -60,6 +60,10 @@ public abstract class Submission implements PublicContribution<SubmissionReferen
     @Override
     @Json(name = "name") public abstract String getFullName();
 
+    @Nullable
+    @Override
+    @Json(name = "body_html") public abstract String getBodyHtml();
+
     @Override
     @Json(name = "gilded") public abstract short getGilded();
 

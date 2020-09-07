@@ -16,6 +16,9 @@ interface PublicContribution<out T: PublicContributionReference> :
     /** The body of the post or comment. Null if the submission is not a self post */
     val body: String?
 
+    /** The html body of the post or comment. Null if the submission is not a self post */
+    val bodyHtml: String?
+
     /** The date at which the Submission was last edited, or null if it hasn't been. */
     val edited: Date?
 
