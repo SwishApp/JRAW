@@ -4,10 +4,12 @@ import com.google.auto.value.AutoValue;
 import com.squareup.moshi.Json;
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
+
 import net.dean.jraw.RedditClient;
 import net.dean.jraw.databind.RedditModel;
 import net.dean.jraw.databind.UnixTime;
 import net.dean.jraw.references.SubmissionReference;
+
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -120,6 +122,10 @@ public abstract class Submission implements PublicContribution<SubmissionReferen
     /** The text content of the post, or null if not a self post */
     @Nullable
     @Json(name = "selftext") public abstract String getSelfText();
+
+    /** The html text content of the post, or null if not a self post */
+    @Nullable
+    @Json(name = "selftext_html") public abstract String getSelfTextHtml();
 
     /** If reddit thinks this submission is spam */
     public abstract boolean isSpam();
